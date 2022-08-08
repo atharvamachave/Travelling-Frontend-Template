@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelling is life</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Travel</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Explore</a>
+          <a href="#">Gallery</a>
+          <a href="#">ContactUs</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="videos/Pexels Videos 1409899.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="videos/video (1).mp4" autoplay muted loop></video>
+      <video class="video-slide" src="videos/production ID_4133023.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="videos/pexels-fearless-dreams-5598971.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="videos/video.mp4" autoplay muted loop></video>
+
+      <div class="content active">
+        <h1>Wonderful.<br><span>Island</span></h1>
+        <p>The Maldives are home to some of the world's most ravishing islands, but it's the sea, which truly makes these islands shine. Luminous aquamarine waters with a crystal clarity lap upon these dazzling white shores, which barely peek above the Indian Ocean.
+            Consisting of 26 natural atolls, the Maldives archipelago is the planet's lowest lying nation, rising no more than three meters above the sea at its highest point, a measurement that shrinks every year.
+            Beneath the mesmerizing waters, coral reefs flourish, luring divers and snorkelers from around the world...</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Camping.<br><span>Enjoy</span></h1>
+        <p>Camping is an outdoor activity that involves staying the night/more than one night in a protective shelter out in nature. Camping is a broad term but in its essence, camping is a way of getting away from the hassle of urban life, to a more natural environment for a limited time..</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Adventures.<br><span>Off Road</span></h1>
+        <p>Adventure sports or extreme sports are activities undertaken through the medium of Land, Water and Air and perceived as involving a high degree of risk. These activities often involve speed, height, a high level of physical exertion and highly specialized gear..</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Road Trip.<br><span>Together</span></h1>
+        <p>Lions Detour is a road trip travel blog about the adventures of Marta and Mandell, Spain based
+            digital nomads. We love to travel! Here you will find useful guides, informative articles, packing
+            checklists, budgeting tips, and the latest stories from our best adventures.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Feel Nature.<br><span></span></h1>
+        <p>Heaven is under our feet as well as over our heads. Look deep into nature, and then you will understand everything better. Study nature, love nature, stay close to nature. It will never fail you.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
+      
